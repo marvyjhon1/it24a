@@ -6,7 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <h1> i am jmpogi</h1>
+
+    <h1>todo List</h1>
+    <input type="text"
+    id="taskInput"
+    placeholder="Add a task"
+    />
+    <button onclick="addtask()">Add Task</button>
+<ul id="tasklist">Your task go here ...</ul>
+<script>  
+        function getTaskText(){
+            const input = document.getElementById('taskInput');
+            const text = input.value.trim();
+
+            console.log("The input value is:" + input.value);
+            return text;
+        }
+        function addtask(){
+            getTaskText();
+
+           
+        }
+        function addtTaskItem(taskText){
+            const li = document.createElement('li');
+            const taskSpan = document.createElement('span');
+            taskSpan.textContent = taskText;
+            li.appendChild(taskSpan);
+            
+            document.getElementById('taskList').appendChild('li');
+        }
+        </Script>
+        
+   
 </body>
 </html>
